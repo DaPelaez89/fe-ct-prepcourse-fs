@@ -207,20 +207,48 @@ function mesesDelAño(array) {
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
 
-   
+   let mesesRequeridos = ['Enero', 'Marzo', 'Noviembre']
+   let mesesPedidos = array.filter(mes => mesesRequeridos.includes(mes));
 
+   if (mesesPedidos.length == mesesRequeridos.length) {
+      return mesesPedidos;
+   } else {
+      return 'No se encontraron los meses pedidos';
+   }
+   
+   
 }
 
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
+
+   let productoDeSeis = [];
+
+   for (let i = 0; i < 11; i++) {
+      productoDeSeis.push(i*6);
+            
+   }
+      return productoDeSeis;
+
 }
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
+
+   let mayor = [];
+
+   array.forEach ((num) => {
+      if (num > 100) {
+         mayor.push(num);
+      }
+   });
+
+   return mayor;
+
 }
 
 /* ----------------------------------------------------------------------------------
@@ -234,6 +262,21 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+
+   let aumentarDos = [];
+
+  for (let i = 0; i < 10; i++) {
+      num += 2;
+      aumentarDos.push(num);
+      if (num == i) {
+         return 'Se interrumpió la ejecución';
+         //break;
+      }
+      
+  }
+
+  return aumentarDos;
+
 }
 
 function continueStatement(num) {
@@ -243,6 +286,21 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+
+   let resultado = [];
+
+  for (let i = 0; i < 10; i++) {
+      
+   if (i == 5) {
+      continue;
+   }
+      num += 2;
+      resultado.push(num);
+         
+  }
+
+  return resultado;
+
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
